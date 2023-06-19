@@ -1,0 +1,7 @@
+.posts {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+/* ? vai the ma luc nay lai khong duoc */

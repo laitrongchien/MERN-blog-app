@@ -1,0 +1,140 @@
+.top {
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.topLeft,
+.topRight {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topIcon {
+  font-size: 24px;
+  margin-right: 16px;
+  color: #444;
+  cursor: pointer;
+}
+
+.barsIcon {
+  flex: 3;
+  font-size: 24px;
+  margin-left: 24px;
+  color: #444;
+  cursor: pointer;
+  display: none;
+}
+
+.topIcon:hover {
+  color: #da7d7d;
+}
+
+.topCenter {
+  flex: 6;
+}
+
+.topList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.topListItem {
+  margin-right: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  cursor: pointer;
+  position: relative;
+}
+
+.topListItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0%;
+  height: 2px;
+  background-color: #f08080;
+  transition: all 0.3s ease-in-out;
+  transform-origin: left;
+}
+
+.topListItem:hover::after {
+  width: 100%;
+  transform: scaleX(1);
+}
+
+.topListItem:hover {
+  color: gray;
+}
+
+.topImgWrap {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.menuList {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 150px;
+  background-color: white;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); */
+  z-index: 1;
+  list-style: none;
+  border: 1px solid #ccc;
+}
+
+.menuItem {
+  height: 30px;
+  line-height: 30px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #d8d2d2;
+}
+
+.menuItem:first-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.topImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  /* margin-right: 15px; */
+  cursor: pointer;
+}
+
+.topSearchIcon {
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+}
+
+@media (max-width: 739px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .barsIcon {
+    display: block;
+  }
+}
